@@ -1,0 +1,40 @@
+<div class="border2">
+  <div class="containerData">
+    
+    <h3>EDIT PERSON</h3>
+
+    <div *ngIf="persons">
+      <!-- pengecekan kalau memang ada isinya butuh soalnya gaada inisialisasi dulu persons nya,
+                                         kayaknya 'if a:' kayak 'if a == True' di python -->
+
+      <div class="data">telepon: <input [(ngModel)]="persons.telepon"/></div>
+      <div class="data">nama   : <input [(ngModel)]="persons.nama   "/></div>
+      <div class="data">email  : <input [(ngModel)]="persons.email  "/></div>
+      <div class="data">alamat : <input [(ngModel)]="persons.alamat "/></div>
+      <div class="data">tipe   : <input [(ngModel)]="persons.tipe   "/></div>
+      <div class="data">cabang : <input [(ngModel)]="persons.cabang "/></div>
+
+      <br>
+        <button type="button" (click)="goBack()">cancel</button>
+
+        <button type="button" (click)="onSave()">save</button>
+
+      <!--
+
+      <a routerLink="/person/{{ persons.id }}">
+        <button type="button" (click)="onClick(persons)"><span>edit</span></button>
+      </a>
+
+      <a routerLink="/delete/{{ persons.id }}">
+        <button type="button" (click)="onClick(persons)">
+          <span>delete</span>
+        </button>
+      </a> -->
+      <!--
+        <div>
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="persons.name" placeholder="name">
+        </div>-->
+    </div>
+  </div>
+</div>

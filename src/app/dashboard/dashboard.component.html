@@ -1,0 +1,37 @@
+<div class="border">
+  <h4 class="title">Waiting List</h4>
+<div class="person-list">
+    <p *ngFor="let i of persons" routerLink="/list/{{ i.id }}">
+      <button type="button" (click)="onClick(i)"><span>{{ i.tipe }}</span></button>
+
+    </p>
+  </div> 
+  <div class="border2">
+    <div class="containerData">
+    <h4 class="title">Data Pemilik</h4>
+   
+<div *ngIf="selectedPerson">    <!-- pengecekan kalau memang ada isinya butuh soalnya gaada inisialisasi dulu selectedPerson nya,
+                                     kayaknya 'if a:' kayak 'if a == True' di python -->
+   <div class="data">telepon: {{selectedPerson.telepon}}</div>
+   <div class="data">nama   : {{selectedPerson.nama   }}</div>
+   <div class="data">email  : {{selectedPerson.email  }}</div>
+   <div class="data">alamat : {{selectedPerson.alamat }}</div>
+   <div class="data">tipe   : {{selectedPerson.tipe   }}</div>
+   <div class="data">cabang : {{selectedPerson.cabang }}</div>
+<br>
+    <a routerLink="/person/{{selectedPerson.id}}" class="EditDelete">
+      <button type="button"><span>edit</span></button>
+      </a>
+      &nbsp;
+      <a routerLink="/delete/{{ selectedPerson.id }}" class="EditDelete">
+        <button type="button" (click)="onClick(selectedPerson)"><span>delete</span></button>
+      </a>
+    <!--
+    <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedPerson.name" placeholder="name">
+    </div>-->
+</div>
+</div>
+  </div>
+</div>

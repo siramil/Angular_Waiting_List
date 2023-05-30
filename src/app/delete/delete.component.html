@@ -1,0 +1,28 @@
+<div class="border2">
+    <div class="containerData">
+    
+      
+      <h3>ARE YOU SURE YOU WANT TO DELETE?</h3>
+
+      <div *ngIf="persons">
+        <!-- pengecekan kalau memang ada isinya butuh soalnya gaada inisialisasi dulu persons nya,
+                                           kayaknya 'if a:' kayak 'if a == True' di python -->
+        <div class="data">telepon: {{persons.telepon}}</div>
+        <div class="data">nama   : {{persons.nama   }}</div>
+        <div class="data">email  : {{persons.email  }}</div>
+        <div class="data">alamat : {{persons.alamat }}</div>
+        <div class="data">tipe   : {{persons.tipe   }}</div>
+        <div class="data">cabang : {{persons.cabang }}</div>
+        
+        <br>
+        
+        <button type="button" (click)="onYes(persons)">yes</button>
+        
+        <button type="button" (click)="goBack()">no</button>
+      
+  
+
+      </div>
+    </div>
+  </div>
+  

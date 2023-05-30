@@ -1,0 +1,84 @@
+/* DashboardComponent's private
+CSS styles */
+
+.person-list {
+    
+    margin: auto;
+    
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+a {
+    background-color: rgb(252, 251, 251);
+    border-radius: 2px;
+    padding: 0.2 rem;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    
+  
+    margin: .5rem 0 1rem 0 ;
+    box-sizing: border-box;
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    
+}
+
+@media (min-width: 600px) {
+    a {
+        box-sizing: content-box;
+        border-style: solid;
+        border-width: 1px;
+    }
+}
+
+a:hover {
+    background-color: lightgray;
+}
+
+.border {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.border2 {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    margin: 5px;
+    background-color: ghostwhite;
+    
+}
+
+.title{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: lighter;
+    color: gray;
+}
+
+.data{
+    margin: 10px;
+}
+
+.containerData {
+    height: 300px;
+}
+
+button:hover {
+    background-color: gray;
+}
+button{
+    height: 20px;
+    margin-left: 10px;
+}
